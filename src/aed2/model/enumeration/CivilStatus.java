@@ -1,7 +1,6 @@
-package aed2.trabalho;
+package aed2.model.enumeration;
 
 public enum CivilStatus {
-	
 	SINGLE("Single"), 
 	MARRIED("Married"), 
 	DIVORCED("Divorced"), 

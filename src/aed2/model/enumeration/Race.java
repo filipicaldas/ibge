@@ -1,7 +1,6 @@
-package aed2.trabalho;
+package aed2.model.enumeration;
 
 public enum Race {
-	
 	BLACK("Black"), 
 	WHITE("White"), 
 	ASIAN("Asian"), 

@@ -1,9 +1,8 @@
-package aed2.trabalho;
+package aed2.model.enumeration;
 
 public enum Sex {
-	
-	MALE("Male"), 
-	FEMALE("Female");
+	MALE("M"), 
+	FEMALE("F");
 	
 	public String sex;
 	
