@@ -2,14 +2,42 @@ package aed2.dao;
 
 import aed2.structure.List;
 
+import java.io.IOException;
+
 public interface DAO<T> {
-    T get(long id);
+    /**
+     * Pega um objeto (Pessoa) pelo identificador.
+     * @param id Identificador.
+     * @return O objeto.
+     * @throws IOException Lançada quando não consegue abrir o arquivo.
+     */
+    T get(long id) throws IOException;
 
-    List<T> get();
+    /**
+     * Pega todos os objetos.
+     * @return A lista de objetos.
+     * @throws IOException Lançada quando não consegue abrir o arquivo.
+     */
+    List<T> get() throws IOException;
 
-    void update(T item);
+    /**
+     * Atualiza uma linha do arquivo pelo identificador usando objeto.
+     * @param item O objeto.
+     * @throws IOException Lançada quando não consegue abrir ou escrever no arquivo.
+     */
+    void update(T item) throws IOException;
 
-    void save(T item);
+    /**
+     * Adiciona uma nova linha no arquivo usando o objeto.
+     * @param item O objeto.
+     * @throws IOException Lançada quando não consegue abrir ou escrever no arquivo.
+     */
+    void save(T item) throws IOException;
 
-    void remove(long id);
+    /**
+     * Remove uma linha do arquivo referente ao identificador.
+     * @param id O identificador.
+     * @throws IOException Lançada quando não consegue abrir ou remover do arquivo.
+     */
+    void remove(long id) throws IOException;
 }
